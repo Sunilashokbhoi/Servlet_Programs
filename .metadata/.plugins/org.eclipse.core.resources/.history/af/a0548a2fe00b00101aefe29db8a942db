@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="background-color: yellow;">
+	<form action="show"method="post">
+	<label>Name :</label> <input type="text" name="name" ><br>
+	<h2>Select Your Hobbies</h2> <br>
+	<input type="checkbox" name="hobbis" values="Reading">Reading
+	<input type="checkbox" name="hobbis" values="Searching">Searching <br>
+	<input type="checkbox" name="hobbis" values="Sleeping">Sleeping
+	<input type="checkbox" name="hobbis" values="Dancing">Dancing
+	<button type="submit" >Click</button>	
+	 
+	</form>
+</body>
+</html>

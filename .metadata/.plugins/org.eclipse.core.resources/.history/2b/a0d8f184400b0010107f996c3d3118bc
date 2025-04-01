@@ -1,0 +1,15 @@
+package servlet;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
+
+public class DisplayServelet implements Servlet {
+	public void init() {
+		
+	}
+	public void service() {
+		
+	}
+	public void destroy() {
+		
+	}
+}

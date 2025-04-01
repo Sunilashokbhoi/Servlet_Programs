@@ -1,0 +1,30 @@
+package com.exam;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Scanner;
+
+public class Employee {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try (sc;) {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "sunil");
+			PreparedStatement ps = con.prepareStatement("select * from employee where   DEPARTMENT  = ?");
+			System.out.println("Enter Dapartment Name:");
+			String dname = sc.next();
+			ps.setString(1, dname);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				System.out.println(
+						rs.getLong(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3) + "\t" + rs.getLong(4));
+			}
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

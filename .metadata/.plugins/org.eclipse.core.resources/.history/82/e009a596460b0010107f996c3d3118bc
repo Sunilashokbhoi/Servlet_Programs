@@ -1,0 +1,33 @@
+package task01;
+import java.io.IOException;
+
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
+@WebServlet("/getuser")
+public class App01 implements Servlet{
+	public void init(ServletConfig scf) {
+		
+	}
+	public void service() {
+		
+	}
+	public void destroy() {
+		
+	}
+	public String getServletInfo() {
+		return null;
+	}
+	public ServletConfig getServletConfig() {
+		return this.getServletConfig();
+	}
+	@Override
+	public void init(ServletConfig arg0) throws ServletException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+}
