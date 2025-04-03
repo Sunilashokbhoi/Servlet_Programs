@@ -42,5 +42,8 @@ public class BookBean implements Serializable{
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
+	public int getQty() {
+		return qty;
+	}
 	
 }

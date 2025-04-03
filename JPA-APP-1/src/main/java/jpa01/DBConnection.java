@@ -8,7 +8,7 @@ public class DBConnection {
 	{
 		try {
 			Class.forName(DBInfo.driver);
-			con = DriverManager.getConnection(DBInfo.dbURL,DBInfo.dbPWord,DBInfo.dbPWord);
+			con = DriverManager.getConnection(DBInfo.dbURL,DBInfo.dbName,DBInfo.dbPWord);
 			
 			
 		}catch(Exception e) {
