@@ -10,6 +10,7 @@ public class ViewBookDetailsServlet extends GenericServlet{
 	public void service(ServletRequest req,ServletResponse resp) throws ServletException, IOException {
 		String bcode = req.getParameter("bcode");
 		BookBean bb = new ViewBookDetailsDAO().retrieve(bcode);
+		
 		if(bb==null) {
 			req.setAttribute("msg","Invalid BookCode ...<br>");
 			req.getRequestDispatcher("Msg.jsp").forward(req, resp);	
